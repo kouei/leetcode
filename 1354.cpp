@@ -5,9 +5,11 @@
  * Always pick up the biggest value, and subtract 
  * the sum of other values from it.
  * 
+ * Let D = max max value in target
+ * 
  * Time:  
  * O(N) for build the heap
- * O(log(max value in target)log(N)) for the while loop
+ * O(log(D)log(N)) for the while loop
  * 
  * Space:
  * O(N) for the heap
