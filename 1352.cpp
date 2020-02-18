@@ -1,6 +1,7 @@
-/****************************************************
+/******************************************************************************
  * Idea:
- * Keep all prefix products of numbers in an array, then calculate the product of last K elements in O(1) complexity.
+ * Keep all prefix products of numbers in an array, 
+ * then calculate the product of last K elements in O(1) complexity.
  * When a zero number is added, clean the array of prefix products.
  * 
  * Let K = total number of operations
@@ -10,7 +11,7 @@
  * 
  * Space:
  * O(K)
- *****************************************************/
+ ******************************************************************************/
 
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
@@ -25,26 +26,19 @@ public:
     vector<int> prefix;
     
     ProductOfNumbers() {
+        prefix = {1}; // Sentinel
     }
     
     void add(int num) {
-        if(num == 0) 
-            prefix.clear();
-        else {
-            if(prefix.size()) 
-                prefix.push_back(prefix.back() * num);
-            else 
-                prefix.push_back(num);
-        }
+        if(num) 
+            prefix.push_back(prefix.back() * num);
+        else
+            prefix = {1};
     }
     
     int getProduct(int k) {
-        if(k < prefix.size()) 
-            return prefix.back() / prefix[prefix.size() - k - 1];
-        else if(k == prefix.size())
-            return prefix.back();
-        else
-            return 0;
+        int n = prefix.size();
+        return k < n ? prefix[n - 1] / prefix[n - k - 1] : 0;
     }
 };
 

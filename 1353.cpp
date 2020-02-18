@@ -1,4 +1,4 @@
-/****************************************************
+/******************************************************************************
  * Idea:
  * Sort events in startTime ascending order.
  * Iterate through from d = 1 to d = 10^5 and maintain
@@ -14,7 +14,7 @@
  * Space:
  * O(logN) for the sorting
  * O(N) for the heap
- *****************************************************/
+ ******************************************************************************/
 
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
