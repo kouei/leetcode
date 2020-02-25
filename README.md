@@ -8,4 +8,5 @@
 |1352|✿|[Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) |Medium|Prefix Sum|[C++](1352.cpp)|O(K)|O(K)|
 |1349|✿|[Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/) |Hard|Bitmasking Dynamic Progamming, Hungarian Algorithm|[C++](1349.cpp)|O(R^2 * C^2)|O(RC)|
 |1348||[Tweet Counts Per Frequency](https://leetcode.com/problems/tweet-counts-per-frequency/) |Medium|Simulation, Binary Search|[C++](1348.cpp)|O(K^2)|O(N)|
+|857|✿|[Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) |Hard|Greedy Algorithm, Heap|[C++](857.cpp)|O(NlogN)|O(N)|
 |300|✿|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) |Medium|Dynamic Progamming, Binary Search|[C++](300.cpp)|O(NlogN)|O(N)|
