@@ -2,15 +2,16 @@
  * Idea:
  * KMP Algorithm
  * 
- * Let N = the length of the source string
- * Let M = the length of the pattern string
- * Let's also assume N > M
+ * Find the longest prefix of s where it is also a palindrome.
+ * Then add the rest suffix (in reverse order) to the beginning of s.
+ * 
+ * Let N be the length of s.
  * 
  * Time:  
  * O(N)
  * 
  * Space:
- * O(M)
+ * O(N)
  ******************************************************************************/
 
 static auto io_accelerator = [](){
@@ -42,13 +43,12 @@ public:
         
         return next;
     }
-    
-    int strStr(const string & s, const string & p) {
-        if(p.empty()) return 0;
-        
+
+    string shortestPalindrome(string s) {
+        if(s.empty()) return s;
+        auto p = s;
         auto next = get_next(p);
-        
-        for(auto i : next) cout << i << " ";
+        reverse(s.begin(), s.end());
         
         auto i = 0;
         auto j = 0;
@@ -64,6 +64,10 @@ public:
             else j = next[j];
         }
         
-        return j == p.size() ? i - p.size() : -1;
+        string res;
+        for(auto i = 0; i < s.size() - j; ++i)
+            res += s[i];
+        res += p;
+        return res;
     }
 };
