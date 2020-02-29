@@ -16,7 +16,7 @@ O(log(D)log(N)) for the while loop
 Space:  
 O(N) for the heap
 
-## Supplementary Test Case:
+## Supplementary Test Case
 [1,1,2]  
 [1, 1000000000]  
 [5, 50]
