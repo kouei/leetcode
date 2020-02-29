@@ -1,21 +1,24 @@
-/******************************************************************************
- * Idea:
- * Sort events in startTime ascending order.
- * Iterate through from d = 1 to d = 10^5 and maintain
- * a heap, where the top of the heap is the current
- * min endTime.
- * 
- * Let N = total number of events
- * 
- * Time:  
- * O(NlogN) for sorting
- * O(NlogN) for the while loop
- * 
- * Space:
- * O(logN) for the sorting
- * O(N) for the heap
- ******************************************************************************/
+# 1353. Maximum Number of Events That Can Be Attended
 
+## Idea
+Sort events in startTime ascending order.  
+Iterate through from d = 1 to d = 10^5 and maintain  
+a heap, where the top of the heap is the current  
+min endTime.  
+
+## Complexity
+Let N = total number of events  
+
+Time:  
+O(NlogN) for sorting  
+O(NlogN) for the while loop  
+
+Space:  
+O(logN) for the sorting  
+O(N) for the heap
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -59,3 +62,4 @@ public:
         return res;
     }
 };
+```

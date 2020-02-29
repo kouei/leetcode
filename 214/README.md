@@ -1,19 +1,17 @@
-/******************************************************************************
- * Idea:
- * KMP Algorithm
- * 
- * Find the longest prefix of s where it is also a palindrome.
- * Then add the rest suffix (in reverse order) to the beginning of s.
- * 
- * Let N be the length of s.
- * 
- * Time:  
- * O(N)
- * 
- * Space:
- * O(N)
- ******************************************************************************/
+# 214. Shortest Palindrome
 
+## Idea
+KMP Algorithm.  
+Find the longest prefix of s where it is also a palindrome.  
+Then add the rest suffix (in reverse order) to the beginning of s.  
+
+## Complexity
+Let N be the length of s.  
+Time: O(N)  
+Space: O(N)
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -71,3 +69,4 @@ public:
         return res;
     }
 };
+```

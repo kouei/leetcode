@@ -1,32 +1,26 @@
-/******************************************************************************
- * This problem has two solutions
- * 1. Bitmask Dynamic Programming
- * 2. Hungarian Algorithm (Optimal)
- ******************************************************************************/
+# 1349. Maximum Students Taking Exam
 
-/******************************************************************************
- * Idea:
- * Bitmask Dynamic Programming.
- * 
- * dp[r][mask] means the max possible number of students for the first r rows 
- * when the r th row's state is mask.
- * 
- * 
- * dp[r][mask] = argmax(previous_mask) dp[r - 1][previous_mask] + ones(mask)
- * 
- * where ones(x) counts the number of ones in x, and previous_mask is 
- * the mask of the previous row;
- * 
- * Let R = number of rows
- * Let C = number of cols
- * 
- * Time:  
- * O(R * 2^(2C))
- * 
- * Space:
- * O(2^C)
- ******************************************************************************/
+## Idea
+This problem has two solutions
+1. Bitmask Dynamic Programming
+2. Hungarian Algorithm (Optimal)
 
+### Bitmask Dynamic Programming
+dp[r][mask] means the max possible number of students for the first r rows  
+when the r th row's state is mask.  
+dp[r][mask] = argmax(previous_mask) dp[r - 1][previous_mask] + ones(mask)  
+where ones(x) counts the number of ones in x, and previous_mask is  
+the mask of the previous row;  
+
+### Complexity
+Let R = number of rows
+Let C = number of cols
+
+Time: O(R * 2^(2C))  
+Space: O(2^C)
+
+### C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -98,24 +92,22 @@ public:
         return *max_element(cur.begin(), cur.end());
     }
 };
+```
 
-/******************************************************************************
- * Idea:
- * Seats on even columns and seats on odd columns form a bipartite graph.
- * Using Hungarian Algorithm to find the Maximum Matching for this graph.
- * Then, the answer is: [total # of seats] - [# of edges in the Maximum Matching].
- * The answer is also known as Maximum Independent Set.
- * 
- * Let R = number of rows
- * Let C = number of cols
- * 
- * Time:  
- * O(R^2 * C^2)
- * 
- * Space:
- * O(RC)
- ******************************************************************************/
+### Hungarian Algorithm (Optimal)
+Seats on even columns and seats on odd columns form a bipartite graph.  
+Using Hungarian Algorithm to find the Maximum Matching for this graph.  
+Then, the answer is: [total # of seats] - [# of edges in the Maximum ching].  
+The answer is also known as Maximum Independent Set.  
 
+### Complexity
+Let R = number of rows  
+Let C = number of cols  
+Time: O(R^2 * C^2)  
+Space: O(RC)
+
+### C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -184,3 +176,4 @@ public:
         return count - res;
     }
 };
+```

@@ -1,25 +1,28 @@
-/******************************************************************************
- * Idea:
- * Instead of transforming [1,1,...,1] to target,
- * try transforming target back to [1,1,...,1].
- * Always pick up the biggest value, and subtract 
- * the sum of other values from it.
- * 
- * Let D = max max value in target
- * 
- * Time:  
- * O(N) for build the heap
- * O(log(D)log(N)) for the while loop
- * 
- * Space:
- * O(N) for the heap
- * 
- * Supplementary Test Case:
- * [1,1,2]
- * [1, 1000000000]
- * [5, 50]
- ******************************************************************************/
+# 1354. Construct Target Array With Multiple Sums
 
+## Idea
+Instead of transforming [1,1,...,1] to target,  
+try transforming target back to [1,1,...,1].  
+Always pick up the biggest value, and subtract  
+the sum of other values from it.
+
+## Complexity
+Let D = max max value in target  
+
+Time:  
+O(N) for build the heap  
+O(log(D)log(N)) for the while loop  
+
+Space:  
+O(N) for the heap
+
+## Supplementary Test Case:
+[1,1,2]  
+[1, 1000000000]  
+[5, 50]
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -59,3 +62,4 @@ public:
         return true;
     }
 };
+```

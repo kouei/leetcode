@@ -1,21 +1,19 @@
-/******************************************************************************
- * Idea:
- * Dynamic Programming + Binary  Search
- * 
- * dp[i] means the smallest tail among all subsequences of length i.
- * suppose there are two subsequences of length 4:
- * [3,4,5,6] and [4,5,6,7]
- * Then dp[4] = 6;
- * 
- * Let N = the length of the array
- * 
- * Time:  
- * O(NlogN)
- * 
- * Space:
- * O(N)
- ******************************************************************************/
+# 300. Longest Increasing Subsequence
 
+## Idea
+Dynamic Programming + Binary  Search.  
+dp[i] means the smallest tail among all subsequences of length i.  
+suppose there are two subsequences of length 4:  
+[3,4,5,6] and [4,5,6,7]  
+Then dp[4] = 6;  
+
+## Complexity
+Let N = the length of the array  
+Time: O(NlogN)  
+Space: O(N)  
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -47,3 +45,4 @@ public:
         return max_len;
     }
 };
+```

@@ -19,11 +19,9 @@ The state transition table is as follows:
 |7|3e-|6|End|End|End|
 |End|/|/|/|/|/|
 
-## Time
-O(N)
-
-## Space
-O(1)
+## Complexity
+Time: O(N)  
+Space: O(1)
 
 ## C++
 ```C++

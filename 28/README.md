@@ -1,18 +1,17 @@
-/******************************************************************************
- * Idea:
- * KMP Algorithm
- * 
- * Let N = the length of the source string
- * Let M = the length of the pattern string
- * Let's also assume N > M
- * 
- * Time:  
- * O(N)
- * 
- * Space:
- * O(M)
- ******************************************************************************/
+# 28. Implement strStr()
 
+## Idea
+KMP Algorithm
+
+## Complexity
+Let N = the length of the source string  
+Let M = the length of the pattern string  
+Let's also assume N > M  
+Time: O(N)  
+Space: O(M)
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -67,3 +66,4 @@ public:
         return j == p.size() ? i - p.size() : -1;
     }
 };
+```

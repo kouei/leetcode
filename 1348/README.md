@@ -1,18 +1,18 @@
-/******************************************************************************
- * Idea:
- * Simple simulation. Binary search can be used to do some 
- * constant level acceleration.
- * 
- * Let K = total number of operations
- * Let N = total number of tweets
- * 
- * Time:  
- * O(K^2)
- * 
- * Space:
- * O(N)
- ******************************************************************************/
+# 1348. Tweet Counts Per Frequency
 
+## Idea
+Simple simulation. Binary search can be used to do some  
+constant level acceleration. 
+
+## Complexity
+Let K = total number of operations  
+Let N = total number of tweets  
+
+Time: O(K^2)  
+Space: O(N)
+
+## C++
+```C++
 static auto io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -68,3 +68,4 @@ public:
  * obj->recordTweet(tweetName,time);
  * vector<int> param_2 = obj->getTweetCountsPerFrequency(freq,tweetName,startTime,endTime);
  */
+```
