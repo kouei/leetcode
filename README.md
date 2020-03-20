@@ -9,6 +9,7 @@
 |1349|✿|[Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/) |Hard|Bitmasking Dynamic Progamming, Hungarian Algorithm|[C++](1349)|O(R^2 * C^2)|O(RC)|
 |1348||[Tweet Counts Per Frequency](https://leetcode.com/problems/tweet-counts-per-frequency/) |Medium|Simulation, Binary Search|[C++](1348)|O(K^2)|O(N)|
 |857|✿|[Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) |Hard|Greedy Algorithm, Heap|[C++](857)|O(NlogN)|O(N)|
+|407|✿|[Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) |Hard|Heap|[C++](407)|O(RClog(RC))|O(RC)|
 |300|✿|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) |Medium|Dynamic Progamming, Binary Search|[C++](300)|O(NlogN)|O(N)|
 |214|✿|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) |Hard|KMP Algorithm|[C++](214)|O(N)|O(N)|
 |65|✿|[Valid Number](https://leetcode.com/problems/valid-number/) |Hard|DFA,Simulation|[C++](65)|O(N)|O(1)|
