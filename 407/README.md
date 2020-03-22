@@ -2,7 +2,7 @@
 
 ## Idea
 Search from edge to center. 
-Keep update the outline of the wall.
+Keep updating the outline of the wall.
 Below is a nice visualization of this algorithm.
 https://www.youtube.com/watch?v=cJayBq38VYw
 
