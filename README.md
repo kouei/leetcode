@@ -12,5 +12,5 @@
 |407|✿|[Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) |Hard|Heap|[C++](407)|O(RClog(RC))|O(RC)|
 |300|✿|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) |Medium|Dynamic Progamming, Binary Search|[C++](300)|O(NlogN)|O(N)|
 |214|✿|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) |Hard|KMP Algorithm|[C++](214)|O(N)|O(N)|
-|65|✿|[Valid Number](https://leetcode.com/problems/valid-number/) |Hard|DFA,Simulation|[C++](65)|O(N)|O(1)|
+|65|✿|[Valid Number](https://leetcode.com/problems/valid-number/) |Hard|DFA, Simulation|[C++](65)|O(N)|O(1)|
 |28||[Implement strStr()](https://leetcode.com/problems/implement-strstr/) |Easy|KMP Algorithm|[C++](28)|O(N)|O(M)|
