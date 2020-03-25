@@ -3,6 +3,7 @@
 
 | # | Favorite | Title | Difficulty | Tag | Solution | Time | Space |
 |---| :------: | ----- | ---------- | --- | -------- | ---- | ----- |
+|1392||[Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) |Hard|KMP Algorithm|[C++](1392)|O(N)|O(N)|
 |1354|✿|[Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/) |Hard|Heap|[C++](1354)|O(N) + O(logDlogN)|O(N)|
 |1353||[Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) |Medium|Heap, Sort|[C++](1353)|O(NlogN)|O(N)|
 |1352|✿|[Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) |Medium|Prefix Sum|[C++](1352)|O(K)|O(K)|
