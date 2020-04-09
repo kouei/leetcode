@@ -1,4 +1,4 @@
-# 1392. Longest Happy Prefix
+# 1406. Stone Game III
 
 ## Idea （by lee215）
 Thanks to lee215 for sharing this elegant solution:  
