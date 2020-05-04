@@ -3,6 +3,7 @@
 
 | # | Favorite | Title | Difficulty | Tag | Solution | Time | Space | Special Trick |
 |---| :------: | ----- | ---------- | --- | -------- | ---- | ----- | ------------- |
+|1439|✿|[Find the Kth Smallest Sum of a Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/) |Hard|Binary Search|[C++](cpp/1439)|O(RClog(R)log(C))|O(R)||
 |1406|✿|[Stone Game III](https://leetcode.com/problems/stone-game-iii/) |Hard|Dynamic Progamming|[C++](cpp/1406)|O(N)|O(1)| **Modulo in DP Array** |
 |1392||[Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) |Hard|KMP Algorithm|[C++](cpp/1392)|O(N)|O(N)||
 |1354|✿|[Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/) |Hard|Heap|[C++](cpp/1354)|O(N) + O(logDlogN)|O(N)||
