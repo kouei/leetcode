@@ -2,10 +2,13 @@
 
 ## Idea
 Dynamic Programming + Binary  Search.  
-dp[i] means the smallest tail among all subsequences of length i.  
+dp[i] means the smallest tail among all subsequences of length i + 1.  
 suppose there are two subsequences of length 4:  
 [3,4,5,6] and [4,5,6,7]  
-Then dp[4] = 6;  
+Then dp[3] = 6.  
+
+Initially, all dp[i] == INF.
+Another observation is that dp is non-decreasing.
 
 ## Complexity
 Let N = the length of the array  
@@ -24,25 +27,14 @@ static auto io_accelerator = [](){
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        vector<int> dp(nums.size() + 1);
-        dp[0] = INT_MIN;
+        auto n = (int)nums.size();
+        vector<int> dp(n, INT_MAX);
         
-        auto max_len = 0;
-        for(auto i : nums) {
-            auto start = 0;
-            auto end = max_len;
-            while(start <= end) {
-                auto mid = start + (end - start) / 2;
-                if(dp[mid] < i) 
-                    start = mid + 1;
-                else
-                    end = mid - 1;
-            }
-            dp[start] = i;
-            if(start > max_len) max_len += 1;
+        for(auto i = 0; i < n; ++i) {
+            *lower_bound(dp.begin(), dp.end(), nums[i]) = nums[i];
         }
         
-        return max_len;
+        return lower_bound(dp.begin(), dp.end(), INT_MAX) - dp.begin();
     }
 };
 ```
