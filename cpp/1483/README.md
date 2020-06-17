@@ -4,7 +4,7 @@
 
 The idea is borrowed from a data structure called **Skip List**.
 
-ancestor[i][j] means the
+ancestor[i][j] means the **2^j** th ancestor of node **i**.
 
 ## Complexity
 
