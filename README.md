@@ -15,6 +15,7 @@
 |1348||[Tweet Counts Per Frequency](https://leetcode.com/problems/tweet-counts-per-frequency/) |Medium|Simulation, Binary Search|[C++](cpp/1348)|O(K^2)|O(N)||
 |0857|✿|[Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) |Hard|Greedy Algorithm, Heap|[C++](cpp/857)|O(NlogN)|O(N)||
 |407|✿|[Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) |Hard|Heap|[C++](cpp/407)|O(RClog(RC))|O(RC)||
+|307||[Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) |Medium|Binary Indexed Tree|[C++](cpp/307)|O(QlogN)|O(N)||
 |300|✿|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) |Medium|Dynamic Progamming, Binary Search|[C++](cpp/300)|O(NlogN)|O(N)||
 |239|✿|[Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) |Hard|Deque|[C++](cpp/239)|O(N)|O(N)||
 |214|✿|[Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) |Hard|KMP Algorithm|[C++](cpp/214)|O(N)|O(N)||
