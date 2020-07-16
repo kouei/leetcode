@@ -24,4 +24,4 @@
 |94||[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) |<img src="assets/medium-icon.png" height="12">|Morris Traversal|[C++](cpp/94)|O(N)|O(1)|Morris Traversal|
 |91||[Decode Ways](https://leetcode.com/problems/decode-ways/) |<img src="assets/medium-icon.png" height="12">|Dynamic Progamming|[C++](cpp/91)|O(N)|O(1)|Modulo in DP Array|
 |65|<img src="assets/favorite-icon.png" height="12">|[Valid Number](https://leetcode.com/problems/valid-number/) |<img src="assets/hard-icon.png" height="12">|DFA, Simulation|[C++](cpp/65)|O(N)|O(1)||
-|28||[Implement strStr()](https://leetcode.com/problems/implement-strstr/) |<img src="assets/easy-icon.png" height="12">|KMP Algorithm|[C++](cpp/28)|O(N)|O(M)||
+|28||[Implement strStr()](https://leetcode.com/problems/implement-strstr/) |<img src="assets/easy-icon.png" height="14">|KMP Algorithm|[C++](cpp/28)|O(N)|O(M)||
