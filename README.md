@@ -3,7 +3,8 @@
 
 | # | Favorite | Title | Difficulty | Tag | Solution | Time | Space | Special Trick |
 |---| :------: | ----- | ---------- | --- | -------- | ---- | ----- | ------------- |
-|1514||[Path with Maximum Probability](https://leetcode.com/problems/max-value-of-equation/) |<img src="assets/medium-icon.png" height="18">|Dijkstra Algorithm|[C++](cpp/1514)|O(NlogE)|O(N)||
+|1514||[Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/) |<img src="assets/medium-icon.png" height="18">|Dijkstra Algorithm|[C++](cpp/1514)|O(NlogE)|O(N)||
+|1513||[Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/) |<img src="assets/medium-icon.png" height="18">|Array|[C++](cpp/1513)|O(N)|O(1)||
 |1499||[Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) |<img src="assets/hard-icon.png" height="18">|Deque|[C++](cpp/1499)|O(N)|O(N)|Monotonic List|
 |1483||[Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) |<img src="assets/hard-icon.png" height="18">|Skip List|[C++](cpp/1483)|O(Q * log(k))|O(n * log(H))|Skip List|
 |1439|<img src="assets/favorite-icon.png" height="16">|[Find the Kth Smallest Sum of a Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/) |<img src="assets/hard-icon.png" height="18">|Binary Search|[C++](cpp/1439)|O(RClog(R)log(C))|O(R)||
