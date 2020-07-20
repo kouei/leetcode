@@ -14,7 +14,7 @@ O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -28,8 +28,8 @@ public:
         int n = s.size();
         vector<int> next(n);
         next[0] = -1;
-        auto i = 0;
-        auto j = - 1;
+        int i = 0;
+        int j = - 1;
         while(i + 1 < n) {
             if(j == -1 || s[i] == s[j]) {
                 ++i;
@@ -42,11 +42,11 @@ public:
     }
     
     string longestPrefix(const string & s) {
-        auto next = get_next(s);
+        vector<int> next = get_next(s);
         
         int n = s.size();
-        auto i = 1;
-        auto j = 0;
+        int i = 1;
+        int j = 0;
         while(i < n) {
             if(s[i] == s[j]) {
                 ++i;

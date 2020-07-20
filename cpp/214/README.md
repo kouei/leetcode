@@ -12,7 +12,7 @@ Space: O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -27,8 +27,8 @@ public:
         vector<int> next(n);
         next[0] = -1;
         
-        auto i = 0;
-        auto j = -1;
+        int i = 0;
+        int j = -1;
         
         while(i + 1 < n) {
             if(j == -1 || s[i] == s[j]) {
@@ -44,12 +44,12 @@ public:
 
     string shortestPalindrome(string s) {
         if(s.empty()) return s;
-        auto p = s;
-        auto next = get_next(p);
+        string p = s;
+        vector<int> next = get_next(p);
         reverse(s.begin(), s.end());
         
-        auto i = 0;
-        auto j = 0;
+        int i = 0;
+        int j = 0;
         for(; i < s.size() && j < p.size();) {
             if(s[i] == p[j]) {
                 ++i;
@@ -63,7 +63,7 @@ public:
         }
         
         string res;
-        for(auto i = 0; i < s.size() - j; ++i)
+        for(int i = 0; i < s.size() - j; ++i)
             res += s[i];
         res += p;
         return res;

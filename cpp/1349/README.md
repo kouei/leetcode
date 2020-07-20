@@ -21,7 +21,7 @@ Space: O(2^C)
 
 ### C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -35,9 +35,9 @@ public:
         int C = seats[0].size();
         
         vector<int> valid_states;
-        for (auto r = 0; r < R; ++r) {
-            auto state = 0;
-            for (auto c = 0; c < C; ++c) 
+        for (int r = 0; r < R; ++r) {
+            int state = 0;
+            for (int c = 0; c < C; ++c) 
                 state = (state << 1) + (seats[r][c] == '.');
             valid_states.push_back(state);
         }
@@ -45,14 +45,14 @@ public:
         vector<int> cur(1 << C, -1);
         vector<int> last(1 << C, -1);
         
-        for (auto r = 0; r < R; ++r) {
+        for (int r = 0; r < R; ++r) {
             
             swap(cur, last);
             
-            auto valid = valid_states[r];
+            int valid = valid_states[r];
             
             // current row state
-            for (auto c = 0; c < (1 << C); ++c) {
+            for (int c = 0; c < (1 << C); ++c) {
 
                 // current state is not a subset of valid state.
                 if((c & valid) != c)
@@ -70,7 +70,7 @@ public:
 
                 // solve other rows
                 // previous row state
-                for (auto k = 0; k < (1 << C); ++k) {
+                for (int k = 0; k < (1 << C); ++k) {
                     
                     // conflict with the left front seat
                     if(c & (k >> 1))
@@ -108,7 +108,7 @@ Space: O(RC)
 
 ### C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -123,13 +123,13 @@ public:
     int R, C;
     
     bool dfs(const vector<int> & node, vector<vector<int>> & seen) {
-        auto r = node[0];
-        auto c = node[1];
+        int r = node[0];
+        int c = node[1];
         
         vector<vector<int>> delta{{-1,-1},{0,-1},{0,+1},{-1,+1},{+1,-1},{+1,+1}};
-        for(auto & d : delta) {
-            auto nr = r + d[0];
-            auto nc = c + d[1];
+        for(vector<int> & d : delta) {
+            int nr = r + d[0];
+            int nc = c + d[1];
             
             if(0 <= nr && nr < R && 
                0 <= nc && nc < C && 
@@ -147,12 +147,12 @@ public:
     }
 
     int Hungarian() {
-        auto res = 0;
-        for(auto c = 0; c < C; c += 2) {
-            for(auto r = 0; r < R; ++r) {
+        int res = 0;
+        for(int c = 0; c < C; c += 2) {
+            for(int r = 0; r < R; ++r) {
                 if(seats[r][c] != '.') 
                     continue;
-                auto seen = vector<vector<int>>(R, vector<int>(C, false));
+                int seen = vector<vector<int>>(R, vector<int>(C, false));
                 res += dfs({r, c}, seen);
             }
         }
@@ -167,11 +167,11 @@ public:
         matching = vector<vector<vector<int>>>(R, vector<vector<int>>(C));
         
         
-        auto res = Hungarian();
+        int res = Hungarian();
                 
-        auto count = 0;
-        for(auto r = 0; r < R; ++r)
-            for(auto c = 0; c < C; ++c)
+        int count = 0;
+        for(int r = 0; r < R; ++r)
+            for(int c = 0; c < C; ++c)
                 count += seats[r][c] == '.';
         return count - res;
     }

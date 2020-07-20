@@ -19,7 +19,7 @@ O(N) for the heap
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -37,9 +37,9 @@ public:
         
         priority_queue<int, vector<int>, greater<int>> heap;
         
-        auto res = 0;
-        auto d = 1;
-        auto i = 0;
+        int res = 0;
+        int d = 1;
+        int i = 0;
         
         for(;;) {
             

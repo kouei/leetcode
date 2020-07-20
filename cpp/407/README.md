@@ -17,7 +17,7 @@ O(RC) for the heap and the visited array.
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -33,10 +33,10 @@ public:
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> heap;
         vector<vector<int>> visited(R, vector<int>(C));
 
-        auto res = 0;
-        auto max_val = INT_MIN;
+        int res = 0;
+        int max_val = INT_MIN;
 
-        for(auto r = 0; r < R; ++r) {
+        for(int r = 0; r < R; ++r) {
             for(int c = 0; c < C; ++c) {
                 if(!(r == 0 || r + 1 == R || c == 0 || c + 1 == C)) continue;
                 heap.push({grid[r][c], r * C + c});
@@ -46,17 +46,17 @@ public:
         
         vector<vector<int>> diff{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
         while(!heap.empty()) {
-            auto val = heap.top(); 
+            int val = heap.top(); 
             heap.pop();
 
-            auto height = val.first;
-            auto r = val.second / C;
-            auto c = val.second % C;
+            int height = val.first;
+            int r = val.second / C;
+            int c = val.second % C;
             max_val = max(max_val, height);
 
-            for(auto & d : diff) {
-                auto r2 = r + d[0];
-                auto c2 = c + d[1];
+            for(int & d : diff) {
+                int r2 = r + d[0];
+                int c2 = c + d[1];
 
                 if(!(0 <= r2 && r2 < R && 0 <= c2 && c2 < C)) continue;
 

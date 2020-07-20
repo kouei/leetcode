@@ -16,7 +16,7 @@ O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -39,31 +39,31 @@ public:
         c.resize(n + 1);
         swap(A, nums);
         
-        for(auto i = 1; i <= n; ++i) {
+        for(int i = 1; i <= n; ++i) {
             c[i] = nums[i - 1];
-            for(auto pos = i - 1; pos > i - lowbit(i); pos -= lowbit(pos)) {
+            for(int pos = i - 1; pos > i - lowbit(i); pos -= lowbit(pos)) {
                 c[i] += c[pos];
             }
         }
     }
     
     void update(int i, int val) {
-        auto diff = val - nums[i];
+        int diff = val - nums[i];
         nums[i] = val;
-        for(auto pos = i + 1; pos <= n; pos += lowbit(pos))
+        for(int pos = i + 1; pos <= n; pos += lowbit(pos))
             c[pos] += diff;
     }
     
     int prefix(int x) {
-        auto res = 0;
+        int res = 0;
         for(; x >= 1; x -= lowbit(x))
             res += c[x];
         return res;
     }
     
     int sumRange(int i, int j) {
-        auto start = i + 1;
-        auto end = j + 1;
+        int start = i + 1;
+        int end = j + 1;
         return prefix(end) - prefix(start - 1);
     }
 };

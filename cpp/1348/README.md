@@ -13,7 +13,7 @@ Space: O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -23,10 +23,10 @@ static auto io_accelerator = [](){
 class TweetCounts {
 public:
     
-    static const auto SECOND = 1;
-    static const auto MINUTE = 60 * SECOND;
-    static const auto HOUR = 60 * MINUTE;
-    static const auto DAY = 24 * HOUR;
+    static const int SECOND = 1;
+    static const int MINUTE = 60 * SECOND;
+    static const int HOUR = 60 * MINUTE;
+    static const int DAY = 24 * HOUR;
     
     unordered_map<string, multiset<int>> m;
     
@@ -40,7 +40,7 @@ public:
     
     vector<int> getTweetCountsPerFrequency(const string & freq, const string & tweetName, int startTime, int endTime) {
         
-        auto unit = -1;
+        int unit = -1;
         if(freq[0] == 'm')
             unit = MINUTE;
         else if(freq[0] == 'h')
@@ -48,13 +48,13 @@ public:
         else
             unit = DAY;
         
-        auto span = endTime - startTime;
-        auto n = span / unit + 1;
+        int span = endTime - startTime;
+        int n = span / unit + 1;
         vector<int> res(n);
         
-        auto & times = m[tweetName];
-        for(auto itr = times.lower_bound(startTime); itr != times.end() && *itr <= endTime; ++itr) {
-            auto index = (*itr - startTime) / unit;
+        int & times = m[tweetName];
+        for(int itr = times.lower_bound(startTime); itr != times.end() && *itr <= endTime; ++itr) {
+            int index = (*itr - startTime) / unit;
             res[index] += 1;
         }
         

@@ -23,7 +23,7 @@ O(N) for the heap
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -37,13 +37,13 @@ public:
         int64_t total = 0;
         
         priority_queue<int> heap;
-        for (auto i : target) {
+        for (int i : target) {
             total += i;
             heap.push(i);
         }
         
         while (true) {
-            auto a = heap.top();
+            int a = heap.top();
             
             heap.pop();
             total -= a;

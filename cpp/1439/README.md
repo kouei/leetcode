@@ -16,7 +16,7 @@ O(R) (for recursion)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -33,18 +33,18 @@ public:
         swap(mat, _mat);
         swap(k, _k);
         
-        auto R = (int)mat.size();
-        auto C = (int)mat[0].size();
+        int R = static_cast<int>(mat.size());
+        int C = static_cast<int>(mat[0].size());
         
         
-        auto start = 1;
-        auto end = R * C * 5000;
-        auto res = -1;
+        int start = 1;
+        int end = R * C * 5000;
+        int res = -1;
         
         while(start <= end) {
-            auto mid = start + (end - start) / 2;
+            int mid = start + (end - start) / 2;
             
-            auto s = bs(mid, 0);
+            int s = bs(mid, 0);
             
             if(s >= k) {
                 res = mid;
@@ -60,8 +60,8 @@ public:
     }
     
     int bs(int sum, int r) {
-        auto R = (int)mat.size();
-        auto C = (int)mat[0].size();
+        int R = static_cast<int>(mat.size());
+        int C = static_cast<int>(mat[0].size());
         
         if(sum < 0)
             return 0;
@@ -69,11 +69,11 @@ public:
         if(r == R) 
             return 1;
         
-        auto res = 0;
+        int res = 0;
         
-        for(auto c = 0; c < C; ++c) {
+        for(int c = 0; c < C; ++c) {
             
-            auto t = bs(sum - mat[r][c], r + 1);
+            int t = bs(sum - mat[r][c], r + 1);
             
             if(t == 0)
                 break;

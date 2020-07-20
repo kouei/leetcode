@@ -16,7 +16,7 @@ O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -41,7 +41,7 @@ public:
         vector<int> max_prob_found(n);
         
         vector<vector<Edge>> my_edges(n);
-        for(auto i = 0; i < edges.size(); ++i) {
+        for(int i = 0; i < edges.size(); ++i) {
             my_edges[edges[i][0]].push_back({edges[i][1], succProb[i]});
             my_edges[edges[i][1]].push_back({edges[i][0], succProb[i]});
         }
@@ -49,11 +49,11 @@ public:
         priority_queue<Edge> heap;
         heap.push({start, 1.0});
         
-        for(auto max_prob_found_count = 1; max_prob_found_count < n; ++max_prob_found_count) {
+        for(int max_prob_found_count = 1; max_prob_found_count < n; ++max_prob_found_count) {
             
-            auto picked_edge = Edge{-1, 0.0};
+            Edge picked_edge{ -1, 0.0 };
             while(heap.size()) {
-                auto top = heap.top();
+                int top = heap.top();
                 heap.pop();
                 
                 if(!max_prob_found[top.next]) {
@@ -70,7 +70,7 @@ public:
             if(picked_edge.next == end)
                 return picked_edge.prob;
             
-            for(auto e : my_edges[picked_edge.next]) {
+            for(Edge e : my_edges[picked_edge.next]) {
                 if(probs[e.next] < picked_edge.prob * e.prob) {
                     probs[e.next] = picked_edge.prob * e.prob;
                     heap.push({e.next, probs[e.next]});

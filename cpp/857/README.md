@@ -21,7 +21,7 @@ Space: O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -39,7 +39,7 @@ public:
         };
         
         vector<Worker> w(n);
-        for(auto i = 0; i < n; ++i)
+        for(int i = 0; i < n; ++i)
             w[i] = { (double)wage[i] / quality[i], quality[i] };
         
         sort(w.begin(), w.end(), [](Worker & a, Worker & b){
@@ -47,9 +47,9 @@ public:
         });
         
         priority_queue<int> heap;
-        auto quality_sum = 0;
-        auto res = numeric_limits<double>::max();
-        for(auto i = 0; i < n; ++i) {
+        int quality_sum = 0;
+        double res = numeric_limits<double>::max();
+        for(int i = 0; i < n; ++i) {
             quality_sum += w[i].quality;
             heap.push(w[i].quality);
             

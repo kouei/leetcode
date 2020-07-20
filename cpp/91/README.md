@@ -18,7 +18,7 @@ O(1)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -30,7 +30,7 @@ public:
     int numDecodings(string s) {
         int n = s.size();
         vector<int> dp(3);
-        for(auto i = n - 1; i >= 0; --i) {
+        for(int i = n - 1; i >= 0; --i) {
             if(s[i] == '0') {
                 dp[i % 3] = 0;
             } else if(s[i] == '1') {

@@ -19,7 +19,7 @@ O(n * log(H))
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -42,8 +42,8 @@ public:
     TreeAncestor(int n, vector<int>& parent) {
         memset(height, 0xff, sizeof(height[0]) * n);
         
-        auto h = 0;
-        for(auto i = 0; i < n; ++i)
+        int h = 0;
+        for(int i = 0; i < n; ++i)
             h = max(h, get_height(i, parent));
         
         level = 0;
@@ -52,17 +52,17 @@ public:
         level += 1;
 
         memcpy(&ancestor[0][0], &parent[0], sizeof(parent[0]) * n);
-        for(auto i = 1; i < level; ++i) {
-            for(auto j = 0; j < n; ++j) {
+        for(int i = 1; i < level; ++i) {
+            for(int j = 0; j < n; ++j) {
                 ancestor[i][j] = ancestor[i - 1][j] == -1 ? -1 : ancestor[i - 1][ancestor[i - 1][j]];
             }
         }
     }
     
     int getKthAncestor(int node, int k) {
-        auto cur = node;
-        auto cur_level = k;
-        for(auto i = level - 1; i >= 0; --i) {
+        int cur = node;
+        int cur_level = k;
+        for(int i = level - 1; i >= 0; --i) {
             while(cur_level >= (1 << i)) {
                 cur_level -= (1 << i);
                 cur = ancestor[i][cur];

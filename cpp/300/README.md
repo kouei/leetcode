@@ -17,7 +17,7 @@ Space: O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -27,10 +27,10 @@ static auto io_accelerator = [](){
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        auto n = (int)nums.size();
+        int n = static_cast<int>(nums.size());
         vector<int> dp(n, INT_MAX);
         
-        for(auto i = 0; i < n; ++i) {
+        for(int i = 0; i < n; ++i) {
             *lower_bound(dp.begin(), dp.end(), nums[i]) = nums[i];
         }
         

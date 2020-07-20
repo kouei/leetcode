@@ -25,7 +25,7 @@ Space: O(1)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -37,25 +37,25 @@ public:
     
     void trim(string & s) {
         int n = s.size();
-        auto i = 0;
+        int i = 0;
         for(; i < n && s[i] == ' '; ++i) {}
         
-        auto j = n - 1;
+        int j = n - 1;
         for(; j >= 0 && s[j] == ' '; --j) {}
         
-        auto pos = 0;
-        auto start = max(0, i);
-        auto end = min(n - 1, j);
-        for(auto k = start; k <= end; ++k)
+        int pos = 0;
+        int start = max(0, i);
+        int end = min(n - 1, j);
+        for(int k = start; k <= end; ++k)
             s[pos++] = s[k];
         s.resize(pos);
     }
     
     bool isNumber(string s) {
         trim(s);
-        auto state = 0;
+        int state = 0;
         
-        for(auto ch : s) {
+        for(char ch : s) {
             if('0' <= ch && ch <= '9') {
                 switch(state) {
                     case 0:

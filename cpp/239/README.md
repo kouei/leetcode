@@ -10,7 +10,7 @@ Space: O(N)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -22,7 +22,7 @@ public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         deque<int> q;
         vector<int> res;
-        for(auto i = 0; i < nums.size(); ++i) {
+        for(int i = 0; i < nums.size(); ++i) {
             
             while(q.size() && i - q.front() >= k)
                 q.pop_front();

@@ -24,7 +24,7 @@ O(1)
 
 ## C++
 ```C++
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -36,9 +36,9 @@ public:
     string stoneGameIII(vector<int>& A) {
         int n = A.size();
         vector<int> dp(4);
-        for(auto i = n - 1; i >= 0; --i) {
+        for(int i = n - 1; i >= 0; --i) {
             dp[i % 4] = INT_MIN;
-            for(auto k = 0, take = 0; k < 3 && i + k < n; ++k) {
+            for(int k = 0, take = 0; k < 3 && i + k < n; ++k) {
                 take += A[i + k];
                 dp[i % 4] = max(dp[i % 4], take - dp[(i + k + 1) % 4]);
             }

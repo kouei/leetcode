@@ -26,7 +26,7 @@ O(1)
  * };
  */
 
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -35,9 +35,9 @@ static auto io_accelerator = [](){
 
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> inorderTraversal(TreeNode * root) {
         vector<int> res;
-        auto cur = root;
+        TreeNode * cur = root;
         while(cur) {
             if(!cur->left) {
                 res.push_back(cur->val);
@@ -45,7 +45,7 @@ public:
                 continue;
             }
             
-            auto prev = cur->left;
+            TreeNode * prev = cur->left;
             while(prev->right && prev->right != cur)
                 prev = prev->right;
             

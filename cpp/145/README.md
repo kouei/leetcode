@@ -22,7 +22,7 @@ Space: O(1)
  * };
  */
 
-static auto io_accelerator = [](){
+static int io_accelerator = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -31,21 +31,21 @@ static auto io_accelerator = [](){
 
 class Solution {
 public:
-    vector<int> postorderTraversal(TreeNode* root) {
+    vector<int> postorderTraversal(TreeNode * root) {
         vector<int> res;
         
         if (!root) 
             return res;
         
-        auto dummy = new TreeNode;
+        TreeNode * dummy = new TreeNode;
         dummy->left = root;
         
-        auto node = dummy;
+        TreeNode * node = dummy;
         while (node) {
             if (!node->left)
                 node = node->right;
             else {
-                auto pre = getPrenode(node);
+                TreeNode * pre = getPrenode(node);
                 if (!pre->right) {
                     pre->right = node;
                     node = node->left;
@@ -60,7 +60,7 @@ public:
     }
     
     TreeNode* getPrenode(TreeNode* node) {
-        auto pre = node->left;
+        TreeNode * pre = node->left;
         while (pre->right && pre->right != node) 
             pre = pre->right;
         return pre;
@@ -68,7 +68,7 @@ public:
     
     void printReverse(TreeNode* leftNode, TreeNode* pre, vector<int>& res) {
         reverse(leftNode, pre);
-        auto node = pre;
+        TreeNode * node = pre;
         res.push_back(node->val);
         while (node != leftNode) {
             node = node->right;
@@ -78,10 +78,10 @@ public:
     }
     
     void reverse(TreeNode* node1, TreeNode* node2) {
-        auto x = node1;
-        auto y = x->right;
+        TreeNode * x = node1;
+        TreeNode * y = x->right;
         while (x != node2) {
-            auto temp = y->right;
+            TreeNode * temp = y->right;
             y->right = x;
             x = y;
             y = temp;
