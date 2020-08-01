@@ -18,6 +18,7 @@
 |1348||[Tweet Counts Per Frequency](https://leetcode.com/problems/tweet-counts-per-frequency/) |<img src="assets/medium-icon.png" height="18">|Simulation, Binary Search|[C++](cpp/1348)|O(K^2)|O(N)||
 |0857|<img src="assets/favorite-icon.png" height="16">|[Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) |<img src="assets/hard-icon.png" height="18">|Greedy Algorithm, Heap|[C++](cpp/857)|O(NlogN)|O(N)||
 |407|<img src="assets/favorite-icon.png" height="16">|[Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) |<img src="assets/hard-icon.png" height="18">|Heap|[C++](cpp/407)|O(RClog(RC))|O(RC)||
+|327|<img src="assets/favorite-icon.png" height="16">|[Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) |<img src="assets/hard-icon.png" height="18">|Binary Indexed Tree|[C++](cpp/327)|O(NlogN)|O(N)||
 |307||[Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) |<img src="assets/medium-icon.png" height="18">|Binary Indexed Tree|[C++](cpp/307)|O(QlogN)|O(N)||
 |300|<img src="assets/favorite-icon.png" height="16">|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) |<img src="assets/medium-icon.png" height="18">|Dynamic Progamming, Binary Search|[C++](cpp/300)|O(NlogN)|O(N)||
 |239|<img src="assets/favorite-icon.png" height="16">|[Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) |<img src="assets/hard-icon.png" height="18">|Deque|[C++](cpp/239)|O(N)|O(N)||
